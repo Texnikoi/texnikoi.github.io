@@ -174,7 +174,7 @@ hr {
     font-size: 1em;
   }
   .navbar-default .navbar-nav>li>a:hover {
-    color: rgb(224, 224, 224);
+    color: rgb(0, 0, 0);
   }
   spacer .octocat {
     width: auto;
@@ -206,7 +206,7 @@ hr {
     background-color: #474747;
   }
   .navbar-default .navbar-nav>li>a {
-    color: rgb(239, 239, 239);
+    color: rgb(0, 0, 0);
     text-transform: lowercase;
   }
   .navbar-default .navbar-nav>li>a:hover {
