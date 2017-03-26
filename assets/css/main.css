@@ -609,32 +609,32 @@ elem #location h1 {
 #intro a {
   color: #666;
 }
-.social-icons .fa-facebook, .social-icons .fa-facebook-square {
+.s-icons .fa-facebook, .s-icons .fa-facebook-square {
   background-color: #3C599F;
 }
-.social-icons .fa-flickr {
+.s-icons .fa-flickr {
   background-color: #FF0084;
 }
-.social-icons .fa-github, .social-icons .fa-github-alt, .social-icons .fa-github-square {
+.s-icons .fa-github, .s-icons .fa-github-alt, .s-icons .fa-github-square {
   background-color: #070709;
 }
-.social-icons .fa-twitter, .social-icons .fa-twitter-square {
+.s-icons .fa-twitter, .s-icons .fa-twitter-square {
   background-color: #32CCFE;
 }
-.social-icons .fa-envelope, .fa-envelope-square, .fa-envelope-o {
+.s-icons .fa-envelope, .fa-envelope-square, .fa-envelope-o {
   background-color: #E54D26;
 }
-.social-icons .fa-building-o, .fa-building {
+.s-icons .fa-building-o, .fa-building {
   background-color: #C52F30;
 }
-.social-icons.icon-rotate .fa:hover, .social-icons.icon-rotate .fa:active {
+.s-icons.icon-rotate .fa:hover, .s-icons.icon-rotate .fa:active {
   -webkit-transform: scale(1.1) rotate(360deg);
   -moz-transform: scale(1.1) rotate(360deg);
   -ms-transform: scale(1.1) rotate(360deg);
   -o-transform: scale(1.1) rotate(360deg);
   transform: scale(1.1) rotate(360deg);
 }
-.social-icons .fa {
+.s-icons .fa {
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -647,11 +647,11 @@ elem #location h1 {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.social-icons.icon-circle .fa {
+.s-icons.icon-circle .fa {
   border-radius: 50%;
   padding-bottom: 1opx;
 }
-.social-icons {
+.s-icons {
   font-size: 1.8em;
 }
 .list-inline li {
