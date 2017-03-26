@@ -105,7 +105,7 @@ $(document).ready(function() {
 
     googleCalendarApiKey: 'AIzaSyBu5kL2kgj9AZXCM8kfSLukPx1Vb7bRSh4',
     events: {
-      googleCalendarId: 'electronicsosu@gmail.com',
+      googleCalendarId: 'texnikoi.osu@gmail.com',
       timezone: 'America/New_York',
     }
   });
