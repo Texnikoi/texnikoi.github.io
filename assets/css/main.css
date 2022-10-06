@@ -420,7 +420,7 @@ hr {
   position: relative;
   background: url(../img/Thompson_4_widescreen.jpg) no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   background-position: 0px 0px, center;
 }
 #landing:before {
