@@ -390,8 +390,21 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  min-height: 100vh;
   background: #a0a09f;
+}
+
+@media (min-width: 992px) {
+  #hero {
+    min-height: auto; /* Allow the section to adjust its height based on content on desktop */
+  }
+}
+
+.btn-get-started {
+  display: block;
+  width: 100%; /* Make the buttons take full width on mobile */
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 #hero .container {
