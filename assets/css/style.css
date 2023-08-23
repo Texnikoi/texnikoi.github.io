@@ -389,6 +389,7 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
+  padding: 60px 0;
   width: 100%;
   min-height: 100vh;
   background: #a0a09f;
