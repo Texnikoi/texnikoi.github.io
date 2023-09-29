@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"> <!-- Tell iOS not to automatically link certain text strings. -->
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <title></title> <!--   The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 23 - 41 can be safely removed. -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+
+    <!-- CSS Reset : BEGIN -->
+    <style>
+
+        /* What it does: Tells the email client that only light styles are provided but the client can transform them to dark. A duplicate of meta color-scheme meta tag above. */
+        :root {
+          color-scheme: light;
+          supported-color-schemes: light;
+        }
+
+        /* What it does: Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: forces Samsung Android mail clients to use the entire viewport */
+        #MessageViewBody, #MessageWebViewDiv{
+            width: 100% !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+
+        /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+        a {
+            text-decoration: none;
+        }
+
+        /* What it does: A work-around for email clients meddling in triggered links. */
+        a[x-apple-data-detectors],  /* iOS */
+        .unstyle-auto-detected-links a,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+
+        /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+        .im {
+            color: inherit !important;
+        }
+
+        /* If the above doesn't work, add a .g-img class to any image in question. */
+        img.g-img + div {
+            display: none !important;
+        }
+
+        /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+        /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+        /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            u ~ div .email-container {
+                min-width: 320px !important;
+            }
+        }
+        /* iPhone 6, 6S, 7, 8, and X */
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            u ~ div .email-container {
+                min-width: 375px !important;
+            }
+        }
+        /* iPhone 6+, 7+, and 8+ */
+        @media only screen and (min-device-width: 414px) {
+            u ~ div .email-container {
+                min-width: 414px !important;
+            }
+        }
+aside {
+  width: 40%;
+  padding-left: 5px;
+  margin-left: 5px;
+  float: right;
+  font-style: italic;
+}
+    </style>
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+    <style>
+
+	    /* What it does: Hover styles for buttons */
+	    .button-td,
+	    .button-a {
+	        transition: all 100ms ease-in;
+	    }
+	    .button-td-primary:hover,
+	    .button-a-primary:hover {
+	        background: #555555 !important;
+	        border-color: #555555 !important;
+	    }
+
+	    /* Media Queries */
+	    @media screen and (max-width : 1229px ){
+
+	        /* What it does: Adjust typography on small screens to improve readability */
+	        .email-container p {
+	            font-size: 17px !important;
+	        }
+
+	    }
+
+    </style>
+    <!-- Progressive Enhancements : END -->
+
+</head>
+<!--
+	The email background color (#222222) is defined in three places:
+	1. body tag: for most email clients
+	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+	3. mso conditional: For Windows 10 Mail
+-->
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
+	<center role="article" aria-roledescription="email" lang="en" style="width: 100%; background-color: #222222;">
+    <!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #222222;">
+    <tr>
+    <td>
+    <![endif]-->
+
+
+        <!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+        <!-- Preview Text Spacing Hack : BEGIN -->
+        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+	       
+        </div>
+        <!-- Preview Text Spacing Hack : END -->
+
+        <!--
+            Set the email width. Defined in two places:
+            1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 600px.
+            2. MSO tags for Desktop Windows Outlook enforce a 600px width.
+        -->
+      <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+            <!--[if mso]>
+            <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600">
+            <tr>
+            <td>
+            <![endif]-->
+
+	        <!-- Email Body : BEGIN -->
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+		        <!-- Email Header : BEGIN -->
+	            <tr>
+	                <td style="padding: 20px 0; text-align: center">
+	                    <img src="https://texnikoi.osu.edu/assets/First%20newsletter%20aug%202023%20images/1961logo.png" width="83%" max-width="400" height="83%" max-height="155" alt="TNK logo 1961" border="0" style="height: auto; background: #00000; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+	                </td>
+	            </tr>
+		        <!-- Email Header : END -->
+
+                <!-- Hero Image, Flush : BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff;">
+                      <img src="https://texnikoi.osu.edu/assets/First%20newsletter%20aug%202023%20images/engineering-hero-FY22.jpg" width="2340" height="" alt="alt_text" border="0" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; margin: auto; display: block;" class="g-img">
+                    </td>
+                </tr>
+                <!-- Hero Image, Flush : END -->
+
+                <!-- 1 Column Text + Button : BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                              <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                <h1 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 25px; line-height: 30px; color: #333333; ">Texnikoi Newsletter Autumn 2023</h1>
+                                  <p style="margin: 0;">Hello everyone! To reconnect and keep TNK alumni updated with the organization, we are excited to announce our semesterly newsletter. These emails will typically contain updates about the organization, students, alumni, and the College of Engineering, as well as excerpts from our archives. We will start off with a CoE update from the Associate Dean Dr. David Tomasko and Dean Dr. Annya Howard!</p>
+                              </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 20px;">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;"><p style="margin: 0;">Hey TNKer's!&nbsp;</p>
+                                  <p style="margin: 0;">Dean Howard and Associate Dean Tomasko here. We wanted to say hello and give big shout out to Texnikoi for being one of our longest running and most productive student organizations. Ben, your new president, asked us to provide a short update on the College for this newsletter (and we thought - what a great idea!) so here it goes. Drum roll please…&nbsp;</p>
+                                  <p style="margin: 0;">&nbsp;</p>
+                                  <p style="margin: 0;">Number one - Ohio State continues to be the absolute best engineering college in the state and one of the strongest in the country. Coming in at #27 in the country in the 2024 USNWR rankings, this was a 3-point jump shot from #30 (and matches our highest ranking in the past decade). You, of course, are one of the main reasons that others see us as a quality institution so keep representing!&nbsp;</p>
+									<p style="margin: 0;">&nbsp;</p>
+                                  <p style="margin: 0;">Number two - We have also added a new degree program in Engineering Technology. It's a 4 year BS degree offered primarily at the regional campuses with an emphasis on manufacturing to support the resurgence of industry in Ohio. We will have the first class of graduates in Spring of 2024. You have also undoubtedly heard about Intel moving to town along with much of their supply chain so we are seeing renewed interest in microelectronics and high tech manufacturing. New certificates and minors in semiconductor devices and processing were just approved this past year. So, check it out and get certified during your time here at Ohio State!&nbsp;</p>
+                                  <p style="margin: 0;">&nbsp;</p>
+                                  <p style="margin: 0;">Number three - If you haven't been back to campus recently, it's almost unrecognizable with new energy and interdisciplinary research buildings going up on west campus and the second phase of the Biomedical and Materials Engineering Complex (yes, that’s a mouthful). Situated at the corner of Woodruff and College, this will be the new home to the first-year engineering program so we have dubbed it the "Gateway to Engineering". And fasten your seatbelts – new makerspaces will be a key asset in the new space. We can’t wait to see what amazing inventions get created!&nbsp;</p>
+                                  <p style="margin: 0;">&nbsp;</p>
+                                  <p style="margin: 0;">All in all it's an exciting time in the College. We invite you to stop by Hitchcock if you're on campus to say Hi and let us know what you're doing. Go Bucks! Best regards. Dr. H and Dr. T </p>
+									<br>
+                              </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 1 Column Text + Button : END -->
+
+                <!-- 2 Even Columns : BEGIN -->
+                <tr>
+                  <td style="padding: 0 10px 20px 10px; background-color: #ffffff;">
+					  <h2 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 25px; line-height: 30px; color: #333333; ">What are TNKers up to?</h2>
+					  <br>
+                    <table width="100%" height="423" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                            <tr>
+                                <td width="50%" height="401" valign="top">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: center; padding: 0 10px;">
+   												 <img src="https://texnikoi.osu.edu/assets/First%20newsletter%20aug%202023%20images/sophia.jpg" alt="alt_text" width="200" height="200" style="object-fit: cover; object-position: 50% 50%; width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" border="0">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;">
+                                              <p style="margin: 0;">Former TNK VP Sophia Sperry just graduated with a degree in Chemical Engineering with a minor in Humanitarian Engineering. She recently began working as a project engineer at P&amp;G's Cascade facility in St Louis. Sophia says, "TNK gave me a community within engineering outside of my specific discipline. I'm thankful for the network of tnkers across the US I keep in touch with. It also prepared me for all the pizza recs I'd get at work"</p>
+                                            <p style="margin: 0;">&nbsp;</p></td>
+                                      </tr>
+                                    </table>
+                                </td>
+                                <td valign="top" width="50%">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td style="text-align: center; padding: 0 10px;">
+   												 <img src="https://texnikoi.osu.edu/assets/First%20newsletter%20aug%202023%20images/mark1.jpg" alt="alt_text" width="200" height="200" style="object-fit: cover; object-position: 50% 40%; width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" border="0">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;">
+                                              <p style="margin: 0;">Mark DiFranco, Mechanical Engineering '24, interned at ABB as a proposals engineer where he worked on three quarter million dollar technology upgrade projects. Right after finishing at ABB, Mark worked at a pizza place. He says, "I felt like at the beginning I needed my hand held at ABB, but now I feel like I'm very independent and get my work done efficiently"</p></td>
+                                        </tr>
+                                    </table>
+                              </td>
+                      </tr>
+                    </table>
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                            <td valign="top" width="50%"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                              <tr>
+  								<td style="text-align: center; padding: 0 10px;">
+  								  <img src="https://texnikoi.osu.edu/assets/First%20newsletter%20aug%202023%20images/fred1.jpg" alt="alt_text" width="200" height="200" style="object-fit: cover; object-position: 50% 35%; width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" border="0">
+  								</td>
+							</tr>
+
+                              <tr>
+                                <td style="text-align: left; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;"><p style="margin: 0;">Fred Ehrman retired from ExxonMobil in 2021 as Chief Engineer Polymers Process Technology.   He worked with R&amp;D Teams on all phases of commercialization from catalyst discovery to pilot testing to commercial trails. He says, "Mentoring young engineers was a particular joy, with this type of activity continuing after retirement through SCORE small business consulting.   The OSU ChE program proved to be an excellent practical and theoretical foundation for success."</p></td>
+                              </tr>
+                            </table></td>
+                            <td valign="top" width="50%"><table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                              <tr>
+ 								<td style="text-align: center; padding: 0 10px;">
+  								  <img src="https://texnikoi.osu.edu/assets/First%20newsletter%20aug%202023%20images/lorie.jpeg" alt="alt_text" width="200" height="200" style="object-fit: cover; object-position: 50% 40%; width: 100%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;" border="0">
+								  </td>
+                              </tr>
+                              <tr>
+                                <td style="text-align: left; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px 10px 0;"><p style="margin: 0;">Since 2019, Lorie Terry (ChemE ‘99) has been a plant manager at Crown Holdings, one of the largest metal packaging manufacturers. She works to keep the plant running smoothly and to increase efficiency. Lorie began at Crown after working in both the paper and activated carbon industries.&nbsp;</p>
+                                  <p style="margin: 0;">&nbsp;</p>
+                                  <p style="margin: 0;">Nothing great in the world has ever been accomplished without passion.&nbsp;</p>
+                                <p style="margin: 0;">~ Georg Wilhelm Friedrich Hegel</p></td>
+                              </tr>
+                            </table></td>
+                          </tr>
+                    </table>
+					  
+                  </td>
+                </tr>
+			  
+			<tr>
+                    <td style="background-color: #ffffff;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                              <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                <h1 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 25px; line-height: 30px; color: #333333; ">Dr. Patrick Sours joins Kent Halloran as Co-Advisor</h1>
+                                <!--Image container start-->
+<div class="box">
+
+  <img src="https://texnikoi.osu.edu/assets/First%20newsletter%20aug%202023%20images/patrick%20sours.jfif" alt="alt_text" width="200" height="200" style="object-fit: cover; object-position: 50% 50%; max-width: 200px; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; float: right; 
+  margin: 5px;" border="0">
+</div>
+<!--Image container end-->
+    
+<!--Text container start-->
+
+
+<div style="display: padding: 10px;">
+  <p style="margin: 0;">Exciting news! We welcome Dr. Patrick Sours, a TNK alumnus (BS ‘17 MS ‘19 Ph.D ‘23), as our new Faculty Co-advisor. He's a FABE Senior Lecturer at The Ohio State University, specializing in Engineering for Sustainable Development and Humanitarian Engineering. With a focus on sociotechnical competency, he aims to tackle challenges in diverse cultural contexts. Dr. Sours has earned recognition for exceptional teaching and leads sustainability projects, including safe water delivery to rural communities. He joins Kent Halloran (BS ‘84), long-time advisor and TNK alumnus. We are excited to utilize their extensive knowledge bases for our upcoming 100th anniversary.</p>
+
+</div>
+
+
+                              </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 20px;">
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+				 <tr>
+                    <td style="background-color: #ffffff;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                              <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                <h3 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 25px; line-height: 30px; color: #333333; ">Looking Ahead</h3>
+								<p style="margin: 0;">Our plans for Autumn 2023 are quite exciting. At the  retreat this past May, we voted to raise the incoming TNK membership to 30 from the previous 25. With serveral legacy applicants we expect to have an excellent group of students applying. Several other things we are hoping to accomplish include:&nbsp;&nbsp;</p>
+                              </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 20px;">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;"> 
+                                    <ul style="padding: 0; margin: 0 0 10px 0; list-style-type: disc;">
+									  <li style="margin:0 0 10px 30px;" class="list-item-first">A joint meeting with Engineers Without Borders (EWB) to create a relationship between both organizations and to allow members of both groups to socialize and build their networks.&nbsp; &nbsp; &nbsp;&nbsp;</li>
+										<li style="margin:0 0 10px 30px;">Professional development events, including  alumni-student advice Q&amp;As and resume reviews. (Thanks for filling out those surveys!)</li>
+									  <li style="margin: 0 0 10px 30px;">An Olentangy River cleanup - a service event to beautify the ever important trail into campus.</li>
+										<li style="margin: 0 0 0 30px;" class="list-item-last">Increase TNK's prescence as an  mainstay engineering organization at OSU through involvement and service.</li>
+                                    </ul>
+
+
+                              </td>
+                        </tr>
+                        </table>
+                    </td>
+                </tr> 
+							 <tr>
+                    <td style="background-color: #ffffff;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                              <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                <h3 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 25px; line-height: 30px; color: #333333; ">Life’s Journey</h3>
+								<p style="margin: 0;"><em> By Kent Halloran (BSCE ’85) <br>
+								  <br>
+								  Hello my fellow TNKer alumni. To quote from the Rolling Stones: “Please allow me to introduce myself.” I am not only an alum of Texnikoi, but I also have the honor as serving as their advisor. And before you ask, I understand the phrase I quoted is from the song “Sympathy for the Devil.” It wasn’t a wholly inappropriate selection. <br>
+  <br>
+								  It seems like only yesterday… No, it doesn’t… Hmmm, a short time ago… nope… not THAT long ago, when I collected my degree at The Shoe on a hot June day. Yet, as you can tell from my by-line, more than a few decades have passed. Back then it never occurred to me that I would one day return to Ohio State as an employee, let alone advise my old honorary. Yet here I am… <br>
+  <br>
+								  All TNKer alumni have a story to tell. Many of you have just started your professional life, others of us have a longer journey to share. How our decisions impacted our journey and those of our loved ones. Perhaps now is the time, the time to meet new friends and rekindle old acquaintances. I am proud to be the first to contribute to our new Texnikoi alumni newsletter. <br>
+  <br>
+							    Please rejoin us and tell us your story. Share with all your Texnikoi clan, alumni and current members alike, some of the lessons you have learnt along your journey, or perhaps a few thoughts or philosophical musings. If you are a member of LinkedIn, please visit our <a href="https://www.linkedin.com/groups/12238295/">Texnikoi Group</a>. <br>
+<br>
+							  Our new officers and members are eager to establish an active Alumni network. Please join us.</em></p></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 20px;">
+                                    
+                                </td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+                <!-- 2 Even Columns : END -->
+
+                <!-- Clear Spacer : BEGIN -->
+
+                <!-- Clear Spacer : END -->
+
+                <!-- 1 Column Text : BEGIN -->
+                <tr>
+                    <td style="background-color: #ffffff;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                              <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                                                      <p style="margin: 0;">To <strong>connect</strong> with other TNK alumni, post resumes, job openings, or post anything else TNK related is our <a href="https://www.linkedin.com/groups/12238295/">LinkedIn page!&nbsp;</a>Current students will be posting resumes looking for suggestions this upcoming semester.</p>
+									<br>
+								  <p style="margin: 0;">If you would like to <strong>support</strong> Texnikoi, we have an <a href="https://www.amazon.com/hz/wishlist/ls/37HV0ITKH2SXJ?ref_=wl_share">Amazon Wishlist!&nbsp;</a>or, if you would like to make a monetary or physical donation to Texnikoi,  email us at <strong>Texnikoi.osu@gmail.com </strong> </p></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- 1 Column Text : END -->
+
+          </table>
+          <!-- Email Body : END -->
+<br>
+          <!-- Email Footer : BEGIN -->
+          <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+          </table>
+        <table width="0" border="0">
+	          <tbody>
+	            <tr>
+	              <td><a href="https://www.linkedin.com/groups/12238295/"><img src="https://texnikoi.osu.edu/assets/First%20newsletter%20aug%202023%20images/linkedin-square-logo-36.png"></a></td>
+	              <td><a href="https://www.instagram.com/osutexnikoi/?hl=en"><img src="https://texnikoi.osu.edu/assets/First%20newsletter%20aug%202023%20images/instagram-alt-logo-36.png" alt="insta logo"></a></td>
+                </tr>
+				  
+              </tbody>
+				
+        </table>
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+	          <tr>
+	            <td style="padding: 0px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #ffffff;">
+	              <webversion style="color: #ffffff; text-decoration: underline; font-weight: bold;"><br>
+	                </webversion>
+	              <webversion style="color: #ffffff; text-decoration: underline; font-weight: bold;">View as a Web Page</webversion>
+	              <br><br>
+	              Texnikoi<br><span class="unstyle-auto-detected-links">@ OSU CoE since 1924<br>
+                  </span>
+	              
+	              <unsubscribe style="color: #ffffff; text-decoration: underline;"><a href="https://forms.gle/Lf1noPnGdpxH1FDT9">unsubscribe</a></unsubscribe></td>
+              </tr>
+        </table>
+          <!-- Email Footer : END -->
+
+          <!--[if mso]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+        </div>
+
+        <!-- Full Bleed Background Section : BEGIN -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #709f2b;">
+            <tr>
+                <td>
+                    <div align="center" style="max-width: 600px; margin: auto;" class="email-container">
+                        <!--[if mso]>
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" align="center">
+                        <tr>
+                        <td>
+                        <![endif]-->
+                        
+                        <!--[if mso]>
+                        </td>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!-- Full Bleed Background Section : END -->
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    </center>
+
+
+</body>
+</html>
