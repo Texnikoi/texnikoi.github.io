@@ -14,7 +14,7 @@ a {
 }
 
 a:hover {
-  color: #73c5eb;
+  color: #ffdb4d;
   text-decoration: none;
 }
 
@@ -112,6 +112,7 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
 #header {
   transition: all 0.5s;
   z-index: 997;
@@ -132,6 +133,7 @@ h6 {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
 
 #header .logo a {
   color: #fff;
@@ -242,8 +244,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #58595b;
-}
+color: #ffdb4d}
 
 .navbar .dropdown:hover>ul {
   opacity: 1;
@@ -391,7 +392,7 @@ h6 {
 #hero {
   /* padding: 60px 0; */
   width: 100%;
-  background: #a0a09f;
+  background: #bfbfbf;
 }
 
 @media (min-width: 992px) {
@@ -412,7 +413,7 @@ h6 {
 }
 
 #hero h1 {
-  margin: 0 0 10px 0;
+  margin: 50px 0 10px 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
@@ -422,7 +423,8 @@ h6 {
 #hero h2 {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 50px;
-  font-size: 24px;
+  /*font-size: 24px;*/
+  font-size: 28px;
 }
 
 #hero .btn-get-started {
@@ -622,6 +624,9 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+.about{
+  background-color: #f2f2f2;
+}
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -680,6 +685,10 @@ section {
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
+
+.why-us{
+  background-color: #f2f2f2;
+}
 .why-us .content {
   padding: 60px 100px 0 100px;
 }
@@ -722,7 +731,7 @@ section {
 
 .why-us .accordion-list li {
   padding: 20px;
-  background: #fff;
+  background: #d9d9d9;
   border-radius: 4px;
 }
 
@@ -766,7 +775,7 @@ section {
 }
 
 .why-us .accordion-list a.collapsed:hover {
-  color: #58595b;
+  color: #ffdb4d;
 }
 
 .why-us .accordion-list a.collapsed .icon-show {
@@ -809,11 +818,19 @@ section {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
+.skills{
+  background-color: #f2f2f2;
+}
+
 .skills .content h3 {
   font-weight: 700;
   font-size: 32px;
   color: #58595b;
   font-family: "Poppins", sans-serif;
+}
+
+.skills .content p{
+  font-size: 15px;
 }
 
 .skills .content ul {
@@ -872,6 +889,11 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
+.services{
+  background-color: #f2f2f2;
+
+}
 .services .icon-box {
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 30px;
@@ -913,6 +935,14 @@ section {
 .services .icon-box:hover h4 a {
   color: #58595b;
 }
+
+/*--------------------------------------------------------------
+# group-photos
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# exec-photos
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Cta
@@ -1066,6 +1096,7 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+
 .portfolio #portfolio-flters {
   list-style: none;
   margin-bottom: 20px;
@@ -1257,6 +1288,7 @@ section {
 # Portfolio Details
 --------------------------------------------------------------*/
 .portfolio-details {
+  background-color: #f2f2f2;
   padding-top: 40px;
 }
 
@@ -1278,12 +1310,13 @@ section {
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #58595b;
+  background-color: #ffdb4d;
 }
 
 .portfolio-details .portfolio-info {
   padding: 30px;
   box-shadow: 0px 0 30px rgba(55, 81, 126, 0.08);
+  background-color: #ffffff;
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -1291,7 +1324,7 @@ section {
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #bfbfbf;
 }
 
 .portfolio-details .portfolio-info ul {
@@ -1316,6 +1349,126 @@ section {
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details 2
+--------------------------------------------------------------*/
+.portfolio-details2 {
+  background-color: #f2f2f2;
+  padding-top: 40px;
+}
+
+.exec-img-hover img {
+  width: 100%;      /* fill container */
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.portfolio-details2 .portfolio-details-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.portfolio-details2 .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;  /* make sure pagination dots are centered */
+}
+
+.portfolio-details2 .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #58595b;
+}
+
+.portfolio-details2 .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffdb4d;
+}
+
+.portfolio-details2 .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(55, 81, 126, 0.08);
+  background-color: #ffffff;
+}
+
+.portfolio-details2 .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.portfolio-details2 .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details2 .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details2 .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details2 .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details2 .portfolio-description p {
+  padding: 0;
+}
+/*--------------------------------------------------------------
+# Portfolio Details 2 Hover
+--------------------------------------------------------------*/
+.exec-img-hover {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  width: 70%; 
+  margin: 0 auto;
+}
+
+.exec-img-hover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.exec-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.exec-img-hover:hover img {
+  transform: scale(1.05);
+}
+
+.exec-img-hover:hover .exec-info {
+  opacity: 1;
 }
 
 /*--------------------------------------------------------------
@@ -1892,7 +2045,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #209dd8;
+  background: #ffdb4d;
   color: #fff;
   text-decoration: none;
 }
@@ -1903,14 +2056,14 @@ section {
   color: #fff;
 }
 
-#footer .copyright {
-  float: left;
+#footer .copyright,
+#footer .credits {
+  text-align: left;
+  float: none;
+  width: 100%;
+  font-size: 14px;
 }
 
-#footer .credits {
-  float: right;
-  font-size: 13px;
-}
 
 #footer .credits a {
   transition: 0.3s;

@@ -1,0 +1,84 @@
+Progress
+
+(5/22/2025) SESSION 1
+ - I created the banners and the html that will be used inside of the banners.
+ - I also inserted the photos into the img folder titled "FA24-SP25" to be used on the about us page.
+
+(5/22/2025) SESSION 2
+ - I cleaned up all the sections on the idex page.
+ - I updated any infomation that needed updated.
+ - I added the interest form to the site.
+ - Next up is to allocate bens index page into there new pages.
+
+(5/23/2025) SESSION 3
+ - I fixed all the grammer mistakes on the site, but have not done the History section yet because I am hungry.
+ - cleaned up the footer and the copyright.
+ 
+(5/24/2025) SESSION 4
+ - I reallocated the pages for index and about us
+ - I added in sections for the photos
+ - I need to edit the section background colors to look nice + new back ground pics for the scroll background (Check color order on tablet notes)
+
+(5/28/2025) SESSION 5
+ - I edited section background colors and went for a lighter tone
+ - I fixed the imperfections in the portfolio logos
+ - small color fixes here and there to suite the new background colors
+ - fixed links on all banners
+ - finished the photo gallary section
+ - finished the index page
+ - finished the exec board headshot section
+ - finished the about us page
+ - next is to put work into the alumni page
+ - Im going to upload this version with a notice on the alumni page that it is currently in development
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2025 Application link (https://docs.google.com/forms/d/e/1FAIpQLSdkd1kzHg5FHX1vh1vsmDpJ7G8Dlxw8E8ey1F7NAU0wFm8Vpg/viewform?usp=header)
+2025 Student interest form link (https://docs.google.com/forms/d/e/1FAIpQLSd6zpAbExFpqywLMX5WVJ7X3cg2cueLOjNM2xOw1tzekhohgg/viewform?usp=header)
+Alumni interest form link (?)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Index.html is the standard homepage
+
+Inner-page.html is not for users its for extracting code! It already has a banner template so I am just going to use that.
+
+portfolio-details.html is another page not for users but a place to grab and use code! I will take the slidshow from here and use it to show off some tnk people from our instagram.
+
+TNK Awards.html is the page that has alumni awards. There is a big chance the info on this page gets put into a new page titled alumni in the banner
+
+tnk2023alumnewsletter.html was an old newletter that I removed due to clutter but if needed you can find it in previous versions of the git.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+IMAGE ORDER (FA24-SP25)
+1. donatosBasment
+2. bowling
+3. initiationEvent
+4. cornMaze
+5. service
+6. OHIO
+7. halloween
+8. executiveBoard
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Instagram (https://www.instagram.com/osutexnikoi/?hl=en)
+Facebook (https://www.facebook.com/TexnikoiOSU/)
+Linkedin (https://www.linkedin.com/groups/12238295/)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ORIGINAL ALUMNI PAGE LINK
+<a href="/texnikoi.github.io/TNK Awards.html" class="btn-learn-more">Texnikoi Outstanding Alumni Awards</a>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+email: texnikoi.osu@gmail.com
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NOTABLE COLORS
+
+hero background: #bfbfbf
+light gray background: #f2f2f2
+light gray content: #d9d9d9
+background white: #ffffff
+accent yellow: #ffdb4d
+hotfix green: #18d26e
