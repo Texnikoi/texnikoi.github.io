@@ -30,23 +30,17 @@ Progress
  - finished the about us page
  - next is to put work into the alumni page
  - Im going to upload this version with a notice on the alumni page that it is currently in development
+
+(6/5/2025) Session 6
+ - did the whole alumni page today, im the goat
+ - alumni form section
+ - alumni awards section
+ - the only other change worth making would be to make the donation section and button on the site but I dont wanna.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 2025 Application link (https://docs.google.com/forms/d/e/1FAIpQLSdkd1kzHg5FHX1vh1vsmDpJ7G8Dlxw8E8ey1F7NAU0wFm8Vpg/viewform?usp=header)
 2025 Student interest form link (https://docs.google.com/forms/d/e/1FAIpQLSd6zpAbExFpqywLMX5WVJ7X3cg2cueLOjNM2xOw1tzekhohgg/viewform?usp=header)
 Alumni interest form link (https://docs.google.com/forms/d/e/1FAIpQLScFVnMAO0FaX-xtRd1EPix80nnxyNk5VdxlUggt6hA3czVvGQ/viewform?usp=sf_link)
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Index.html is the standard homepage
-
-Inner-page.html is not for users its for extracting code! It already has a banner template so I am just going to use that.
-
-portfolio-details.html is another page not for users but a place to grab and use code! I will take the slidshow from here and use it to show off some tnk people from our instagram.
-
-TNK Awards.html is the page that has alumni awards. There is a big chance the info on this page gets put into a new page titled alumni in the banner
-
-tnk2023alumnewsletter.html was an old newletter that I removed due to clutter but if needed you can find it in previous versions of the git.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -64,11 +58,6 @@ IMAGE ORDER (FA24-SP25)
 Instagram (https://www.instagram.com/osutexnikoi/?hl=en)
 Facebook (https://www.facebook.com/TexnikoiOSU/)
 Linkedin (https://www.linkedin.com/groups/12238295/)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-ORIGINAL ALUMNI PAGE LINK
-<a href="/texnikoi.github.io/TNK Awards.html" class="btn-learn-more">Texnikoi Outstanding Alumni Awards</a>
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 email: texnikoi.osu@gmail.com
