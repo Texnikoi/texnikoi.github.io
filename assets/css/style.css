@@ -1018,8 +1018,10 @@ section {
 }
 
 .alumni-form h3 {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #58595b;
+  text-transform: uppercase;
 }
 
 .alumni-form .alumni-form-btn {
@@ -1046,7 +1048,7 @@ section {
   height: auto;
   object-fit: cover;
   margin-top: 10%;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 
 }
 
