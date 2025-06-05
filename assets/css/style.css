@@ -234,11 +234,14 @@ h6 {
   font-size: 14px;
   text-transform: none;
   font-weight: 500;
-  color: #0c3c53;
+  color: #f2f2f2;
 }
 
 .navbar .dropdown ul a i {
   font-size: 12px;
+}
+.navbar .dropdown ul li a {
+  color: #737373;
 }
 
 .navbar .dropdown ul a:hover,
@@ -272,6 +275,18 @@ color: #ffdb4d}
 
   .navbar .dropdown .dropdown:hover>ul {
     left: -100%;
+  }
+    .navbar-mobile .getstarted,
+  .navbar-mobile .getstarted:focus {
+    display: inline-block;
+    width: auto;
+    padding: 8px 16px;
+    margin: 10px auto;
+    font-size: 15px;
+    border-radius: 30px;
+    text-align: center;
+    border: 2px solid #efd154;
+    background: none;
   }
 }
 
@@ -308,7 +323,7 @@ color: #ffdb4d}
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(40, 58, 90, 0.9);
+  background: rgba(0, 0, 0, 0.5);
   transition: 0.3s;
   z-index: 999;
 }
@@ -937,14 +952,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# group-photos
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# exec-photos
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
 .cta {
@@ -996,6 +1003,87 @@ section {
   }
 }
 
+/*--------------------------------------------------------------
+# alumni-form
+--------------------------------------------------------------*/
+.alumni-form {
+  background-color: #f2f2f2;
+  padding: 25px 0;
+}
+
+.alumni-form .alumni-form-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.alumni-form h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.alumni-form .alumni-form-btn {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 0px;
+  border: 3px solid #6c6c6d;
+  background-color: #808080;
+  color: #ffffff;
+}
+
+.alumni-form .alumni-form-btn:hover {
+  background: #ffdb4d;
+}
+
+.alumni-form .alumni-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 10%;
+  padding-bottom: 5rem;
+
+}
+
+@media (max-width: 1024px) {
+  .alumni-form {
+    background-attachment: scroll;
+  }
+
+  .alumni-form .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .alumni-form .col-lg-9,
+  .alumni-form .col-lg-3 {
+    width: 100%;
+    max-width: 700px;
+  }
+  .alumni-form .alumni-form-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.alumni-form .alumni-img {
+  margin-top: 2rem;
+  width: 60%;
+  max-width: 300px;
+  padding-bottom: 0%;
+}
+}
+@media (min-width: 769px) {
+.alumni-form .alumni-form-btn-container {
+  align-items: center;
+  width: 100%;
+}
+}
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
@@ -1649,6 +1737,61 @@ section {
   .faq .faq-list {
     padding: 0;
   }
+}
+/*--------------------------------------------------------------
+# Alumni
+--------------------------------------------------------------*/
+.alumni-awards {
+  background-color: #f2f2f2;
+}
+
+.alumni-awards body {
+  margin: 0px;
+}
+
+.alumni-awards header {
+  text-align: center;
+}
+
+.alumni-awards header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.alumni-awards header p {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.alumni-awards .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  border-width: 0;
+}
+
+.alumni-awards .card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0px;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.alumni-awards .card:hover{
+  transform: translateY(-5px);
+}
+
+.alumni-awards .card:hover h2 {
+    color: #ffdb4d;
+}
+
+.alumni-awards .card h2 {
+  font-size: 1.30rem;
+  margin: 0 0 0.25rem;
+}
+
+.alumni-awards .card p {
+  margin: 0.2rem 0;
 }
 
 /*--------------------------------------------------------------
