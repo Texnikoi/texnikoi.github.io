@@ -268,6 +268,12 @@ color: #ffdb4d}
   visibility: visible;
 }
 
+.navbar a,
+.navbar a:focus,
+.navbar .dropdown-toggle {
+  cursor: pointer;
+}
+
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
@@ -897,7 +903,7 @@ section {
 .skills .progress-bar {
   width: 1px;
   height: 10px;
-  transition: 0.9s;
+  transition: 0.2s;
   background-color: #4668a2;
 }
 
@@ -923,7 +929,7 @@ section {
 .services .icon-box .icon i {
   color: #58595b;
   font-size: 36px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .services .icon-box h4 {
@@ -934,7 +940,7 @@ section {
 
 .services .icon-box h4 a {
   color: #58595b;
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.2s;
 }
 
 .services .icon-box p {
@@ -978,7 +984,7 @@ section {
   display: inline-block;
   padding: 12px 40px;
   border-radius: 50px;
-  transition: 0.5s;
+  transition: .3s;
   margin: 10px;
   border: 2px solid #fff;
   color: #fff;
@@ -1032,7 +1038,7 @@ section {
   display: inline-block;
   padding: 12px 40px;
   border-radius: 50px;
-  transition: 0.5s;
+  transition: 0.3s;
   margin: 0px;
   border: 3px solid #6c6c6d;
   background-color: #808080;
@@ -1200,7 +1206,7 @@ section {
   font-weight: 500;
   line-height: 1;
   color: #444444;
-  transition: all 0.3s;
+  transition: all .3s;
   padding: 8px 20px;
   border-radius: 50px;
   font-family: "Poppins", sans-serif;
@@ -1221,7 +1227,7 @@ section {
 }
 
 .portfolio .portfolio-item .portfolio-img img {
-  transition: all 0.6s;
+  transition: all 0.3s;
 }
 
 .portfolio .portfolio-item .portfolio-info {
@@ -1232,7 +1238,7 @@ section {
   z-index: 3;
   right: 15px;
   transition: all 0.3s;
-  background: rgba(55, 81, 126, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   padding: 10px 15px;
 }
 
