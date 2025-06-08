@@ -773,8 +773,8 @@ section {
 
 .why-us .accordion-list span {
   color: #58595b;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 550;
+  font-size: 18px;
   padding-right: 10px;
 }
 
@@ -795,7 +795,7 @@ section {
 }
 
 .why-us .accordion-list a.collapsed {
-  color: #343a40;
+  color: #58595b;
 }
 
 .why-us .accordion-list a.collapsed:hover {
