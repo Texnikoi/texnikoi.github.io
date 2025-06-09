@@ -30,12 +30,17 @@ Progress
  - finished the about us page
  - next is to put work into the alumni page
  - Im going to upload this version with a notice on the alumni page that it is currently in development
-
+ 
 (6/5/2025) Session 6
  - did the whole alumni page today, im the goat
- - alumni form section
- - alumni awards section
+ - added alumni form section
+ - added alumni awards section
  - the only other change worth making would be to make the donation section and button on the site but I dont wanna.
+
+(6/9/2025) Session 7
+ - I reorganized the files to make it easier to navigate the files for the next president.
+ - I removed all known unused files. If you want to find the old site go to the git and use bens most recent push.
+ - Bens site includes both his site and the old tnk site.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 2025 Application link (https://docs.google.com/forms/d/e/1FAIpQLSdkd1kzHg5FHX1vh1vsmDpJ7G8Dlxw8E8ey1F7NAU0wFm8Vpg/viewform?usp=header)
@@ -65,9 +70,9 @@ email: texnikoi.osu@gmail.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 NOTABLE COLORS
 
+navbar background:#58595b
 hero background: #bfbfbf
 light gray background: #f2f2f2
 light gray content: #d9d9d9
 background white: #ffffff
 accent yellow: #ffdb4d
-hotfix green: #18d26e

@@ -964,7 +964,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(160,160,159,0.7), rgba(160,160,159,0.7)), url("../img/cta-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(160,160,159,0.7), rgba(160,160,159,0.7)), url("../img/baseImages/ThompsonLibrary.jpg") fixed center center;
   background-size: cover;
   padding: 120px 0;
 }

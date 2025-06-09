@@ -1,1 +1,0 @@
-# texnikoi.github.io
